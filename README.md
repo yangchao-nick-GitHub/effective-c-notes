@@ -27,7 +27,7 @@ a.常量指针通常这样定义 const char * const hello = "hello world";  两�
 b.class 定义常量， 通常 定义成static const, 如果想在声明时初始化static const 变量， 可以使用
 constexpr， static constexpr float pi = 3.14;
 
-# 条款03: 尽可能使用const
+### 条款03: 尽可能使用const
 * const优势：
 使用const明确告知编译器和程序员该值保持不变
 const 修饰函数返回值 参数 和函数自身, 返回值时引用或者指针时使用const修饰返回值才有意义
@@ -40,7 +40,7 @@ b.一些重载operator[]的类，一般有两个版本，如
 * const 对象应该调用 const版本的operator[]函数 保护对象内容，这时候必须要有 const 版本的成员函数
 这是因为const对象只能调用const成员函数
 
-### 条款4: 确定对象在使用前已被初始化
+### 条款04: 确定对象在使用前已被初始化
 * 尽量使用初始化列表，使用了初始化列表，非内置类型直接调用拷贝构造初始化，如果不使用就会调用默认构造+赋值函数，所以使用初始化列表可以提高效率
 * const 引用成员必须使用初始化列表初始化
 * 初始化列表初始化的顺序和声明的顺序一致
